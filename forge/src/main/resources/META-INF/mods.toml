@@ -1,0 +1,35 @@
+modLoader = "kotlinforforge"
+loaderVersion = "[3.12.0,)"
+issueTrackerURL = "https://github.com/SLimeyMC/${mod_id}/issues"
+license = "${mod_license}"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "Better VS Ship Assembler"
+authors = ["SlimeyAr"]
+description = '''
+${mod_description}
+'''
+logoFile = "icon.png"
+
+[[dependencies.${mod_id}]]
+modId = "forge"
+mandatory = true
+versionRange = "[40.1.69,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.18.2,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "valkyrienskies"
+mandatory = true
+versionRange = "[2.1.1-beta.1,)"
+ordering = "AFTER"
+side = "BOTH"

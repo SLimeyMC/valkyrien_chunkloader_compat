@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    {
+      "name": "SlimeyAr",
+      "contact": {
+        "homepage": "https://slimeymc.github.io/"
+      }
+    }
+  ],
+  "contributors": [],
+  "contact": {
+    "sources": "https://github.com/SLimeyMC/${mod_id}",
+    "issues": "https://github.com/SLimeyMC/${mod_id}/issues"
+  },
+  "license": "${mod_license}",
+  "icon": "assets/${mod_id}/icon.png",
+  "environment": "${mod_environment}",
+  "entrypoints": {
+    "main": [
+      "io.github.slimeymc.${mod_id}.fabric.MainMod"
+    ],
+    "client": [
+      "io.github.slimeymc.${mod_id}.fabric.ClientMod"
+    ],
+    "server": [
+      "io.github.slimeymc.${mod_id}.fabric.DedicatedServerMod"
+    ],
+    "preLaunch": [
+      "io.github.slimeymc.${mod_id}.fabric.ValkyrienPreLaunch"
+    ]
+  },
+  "mixins": [
+    "${mod_id}-common.mixins.json",
+    "${mod_id}.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=1.18.2",
+    "valkyrienskies": ">=2.1.1-beta.5",
+    "fabricloader": ">=0.14.21"
+  },
+  "recommends": {},
+  "suggests": {},
+  "breaks": {},
+  "conflicts": {}
+}

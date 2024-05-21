@@ -1,0 +1,84 @@
+[versions]
+kotlin = "1.9.23" # have to check everytime gg
+
+shadow = "8.1.1"
+
+architectury_plugin = "3.4.+"
+architectury_loom = "1.5.+"
+
+mod_publish_plugin = "0.5.+"
+
+minecraft = "1.18.2"
+parchment = "2022.09.04"
+# yarn_mappings = "1.18.2+build.4" # Nope
+architectury = "4.11.93" # Might check each subproject
+
+fabric_loader = "0.15.7"
+fabric_api = "0.76.0+1.18.2"
+fabric_language_kotlin = "1.10.17+kotlin.1.9.22"
+
+forge = "1.18.2-40.2.17"
+kotlin_for_forge = "3.12.0"
+
+chunkloader_fabric = "1.2.8a-fabric-mc1.18"
+chunkloader_forge = "1.2.8a-forge-mc1.18"
+
+valkyrienskies = "2.1.1-beta.6+8efd751c2d"
+valkyrienskies_core = "1.1.0+8a93383ce5"
+
+[libraries]
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+# yarn_mappings = { module = "net.fabricmc:yarn", version.ref = "yarn_mappings" }
+parchment = { module = "org.parchmentmc.data:parchment-1.18.2", version.ref = "parchment" }
+
+common_architectury = { module = "dev.architectury:architectury", version.ref = "architectury" }
+
+# Fabric
+fabric = { module = "net.fabricmc:fabric-loader", version.ref = "fabric_loader" }
+fabric_architectury = { module = "dev.architectury:architectury-fabric", version.ref = "architectury" }
+fabric_api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric_api" }
+# https://github.com/FabricMC/fabric-language-kotlin
+fabric_kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabric_language_kotlin" }
+
+# Forge froge fr*nchies
+forge = { module = "net.minecraftforge:forge", version.ref = "forge" }
+forge_architectury = { module = "dev.architectury:architectury-forge", version.ref = "architectury" }
+# https://github.com/thedarkcolour/KotlinForForge/blob/4.x/README.md
+forge_kotlin = { module = "thedarkcolour:kotlinforforge", version.ref = "kotlin_for_forge" }
+
+# Valkyrien skies
+common_valkyrienskies = { module = "org.valkyrienskies:valkyrienskies-118-common", version.ref = "valkyrienskies"  }
+fabric_valkyrienskies = { module = "org.valkyrienskies:valkyrienskies-118-fabric", version.ref = "valkyrienskies"  }
+forge_valkyrienskies = { module = "org.valkyrienskies:valkyrienskies-118-forge", version.ref = "valkyrienskies"  }
+
+# Core valkyrien skies
+core_valkyrienskies_api = { module = "org.valkyrienskies.core:api", version.ref = "valkyrienskies_core" }
+core_valkyrienskies_apigame = { module = "org.valkyrienskies.core:api-game", version.ref = "valkyrienskies_core" }
+core_valkyrienskies_util = { module = "org.valkyrienskies.core:util", version.ref = "valkyrienskies_core" }
+core_valkyrienskies_impl = { module = "org.valkyrienskies.core:impl", version.ref = "valkyrienskies_core" }
+
+# Depedency for the valkyrien skies that i have to add it myself
+mixinextras = { module = "com.github.LlamaLad7:MixinExtras", version = "0.1.1" }
+
+# Chunkloader
+fabric_chunkloader = { module = "maven.modrinth:chunk-loaders", version.ref = "chunkloader_fabric" }
+forge_chunkloader = { module = "maven.modrinth:chunk-loaders", version.ref = "chunkloader_forge" }
+
+## Non mod library
+# JOML
+joml = { module = "org.joml:joml", version = "1.10.4" }
+joml_primitives = { module = "org.joml:joml-primitives", version = "1.10.0" }
+
+[bundles]
+core_valkyrienskies = ["core_valkyrienskies_api", "core_valkyrienskies_apigame", "core_valkyrienskies_util", "core_valkyrienskies_impl"]
+joml = ["joml", "joml_primitives"]
+
+[plugins]
+shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
+
+
+
+architectury_plugin = { id = "architectury-plugin", version.ref = "architectury_plugin" }
+architectury_loom = { id = "dev.architectury.loom", version.ref = "architectury_loom" }
+
+modpublish = { id = "me.modmuss50.mod-publish-plugin", version.ref = "mod_publish_plugin" }

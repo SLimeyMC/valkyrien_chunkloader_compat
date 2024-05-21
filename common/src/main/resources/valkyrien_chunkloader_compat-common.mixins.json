@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "io.github.slimeymc.valkyrien_chunkloader_compat.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "server": [
+    "compat.MixinServerChunkLoaderCapability"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
